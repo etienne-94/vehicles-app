@@ -1,27 +1,29 @@
-# Used Vehicle Market Analysis Web Application
+# Vehicles Market Analysis Web Application
 
 ---
 
 ## Project Overview
 
-This project consists of an interactive web application developed with Streamlit for exploratory analysis of used vehicle advertisement data.
+This project consists of an interactive web application developed with Streamlit for exploratory analysis of vehicle advertisement data.
 
-The application enables users to explore vehicle characteristics through interactive visualizations, making it easier to identify relationships between mileage, price, and other attributes.
+The application allows users to visualize key characteristics of the dataset through interactive charts and controls, making it easier to identify patterns and relationships between vehicle attributes.
 
-The project demonstrates how data analysis can be transformed into an accessible web application for interactive exploration.
+The project combines data analysis, visualization, and web deployment techniques to provide an accessible analytical tool for users.
 
 ---
 
 ## Business Problem
 
-Used vehicle marketplaces generate large volumes of advertisement data containing valuable insights about pricing and vehicle characteristics.
+Online vehicle marketplaces contain large volumes of listings, making it difficult to quickly identify trends and relationships within the data.
 
-The objective of this project is to provide an interactive interface that allows users to:
+This application helps users explore vehicle advertisement information by providing interactive visualizations that reveal:
 
-- Explore vehicle price distributions
-- Analyze mileage patterns
-- Investigate relationships between numerical variables
-- Interact with visualizations without writing code
+- Mileage distribution
+- Relationships between vehicle price and mileage
+- General characteristics of listed vehicles
+- Data patterns through interactive exploration
+
+Such insights can support market analysis and data-driven decision-making.
 
 ---
 
@@ -31,76 +33,82 @@ The project uses the dataset:
 
 - `vehicles_us.csv`
 
-The dataset contains advertisements for used vehicles, including information such as:
-
-- Price
-- Model year
-- Mileage
-- Fuel type
-- Transmission
-- Vehicle condition
-- Vehicle type
-
-The dataset was provided by TripleTen for educational purposes.
+The dataset contains information about vehicle advertisements, including price, model year, mileage, condition, fuel type, transmission type, and other vehicle characteristics.
 
 ---
 
 ## Technologies Used
 
 - Python
-- Pandas(análise e manipulação de dados)
-- Plotly Express(gráficos interativos)
-- Streamlit (interface web)
+- Pandas
+- Plotly Express
+- Streamlit
 - Jupyter Notebook
-- Git (controlo de versões)
-- GitHub (armazenamento e partilha do código)
-- Render (hospedagem da aplicação)
+- Git
+- GitHub
+- Render
 
 ---
 
-## Application Features
+## Exploratory Data Analysis
 
-The application allows users to:
+Before building the web application, an exploratory analysis was conducted to understand the dataset structure and identify important variables.
 
-- Explore vehicle mileage distributions through interactive histograms.
-- Visualize the relationship between mileage and price using scatter plots.
-- Interact with charts through Streamlit checkboxes.
-- Analyze data dynamically without modifying the source code.
+The analysis included:
+
+- Data cleaning and preprocessing
+- Missing value handling
+- Exploratory visualizations
+- Variable relationship analysis
+- Dataset quality assessment
+
+The complete exploratory analysis can be found in:
+
+```text
+notebooks/EDA.ipynb
+```
 
 ---
 
-## Interactive Visualizations
+## Web Application Features
 
-The application includes:
+The application provides:
 
-- Mileage Distribution Histogram
-- Mileage vs Price Scatter Plot
-
----
-
-## Live Demo
-
-The application is available online through Render:
-
-https://vehicles-app-epdt.onrender.com
+- Interactive histogram visualization
+- Interactive scatter plot visualization
+- Dynamic user controls through checkboxes
+- Real-time chart generation
+- Responsive web interface
 
 ---
 
 ## Application Screenshots
 
-### Home Interface
+### Mileage Distribution Histogram
 
-*(image here)*
+![Histogram](images/histogram.png)
 
----
-
-### Scatter Plot Analysis
-
-*(image here)*
+Interactive histogram showing the distribution of vehicle mileage.
 
 ---
 
-## How to Run
+### Price vs Mileage Scatter Plot
+
+![Scatter Plot](images/scatter_plot.png)
+
+Interactive scatter plot illustrating the relationship between vehicle mileage and price.
+
+---
+
+## Live Demo
+
+The application is available online:
+
+https://vehicles-app-epdt.onrender.com
+
+---
+
+## How to Run Locally
 
 1. Clone the repository:
 
@@ -108,13 +116,19 @@ https://vehicles-app-epdt.onrender.com
 git clone https://github.com/etienne-94/vehicles-app.git
 ```
 
-2. Install the required libraries:
+2. Navigate to the project directory:
+
+```bash
+cd vehicles-app
+```
+
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Launch the application:
+4. Launch the Streamlit application:
 
 ```bash
 streamlit run app.py
@@ -128,15 +142,10 @@ streamlit run app.py
 vehicles-app/
 │
 ├── app.py
+├── vehicles_us.csv
 ├── requirements.txt
 ├── README.md
-├── LICENSE
 ├── .gitignore
-├── vehicles_us.csv
-│
-├── images/
-│   ├── app_home.png
-│   └── scatter_plot.png
 │
 ├── notebooks/
 │   └── EDA.ipynb
@@ -144,23 +153,16 @@ vehicles-app/
 ├── .streamlit/
 │   └── config.toml
 │
-└── .vscode/
-    └── settings.json
+└── images/
+    ├── histogram.png
+    └── scatter_plot.png
 ```
 
 ---
 
 ## Dataset Availability
 
-The dataset used in this project was provided by TripleTen for educational purposes and is not included in this repository.
-
----
-
-## Conclusion
-
-This project demonstrates how exploratory data analysis can be transformed into an interactive web application, allowing users to explore vehicle data without programming knowledge.
-
-By combining Python, Pandas, Plotly Express, and Streamlit, the application provides an intuitive interface for visualizing patterns and relationships within the dataset while showcasing practical skills in data analysis, web application development, and deployment.
+The dataset used in this project was provided by TripleTen for educational purposes and is included exclusively for learning and portfolio development.
 
 ---
 
